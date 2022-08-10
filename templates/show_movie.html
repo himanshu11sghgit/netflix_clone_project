@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Profile Create
+{% endblock title %}
+
+
+{% block others %}
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <style>
+        header {
+            background-image: url("{% static 'background_netflix.jpg' %}")
+        }
+
+        .player::-webkit-progress-bar{
+            color: red; 
+        }
+    </style>
+{% endblock others %}
+
+
+
+
+{% block content %}
+    {% include 'nav.html' %}
+    <header class='bg-primary_black h-full w-full '>
+        
+        <video src="assets/test.mp4" controls class="w-full h-screen player"></video>
+    </header>
+
+
+{% endblock content %}

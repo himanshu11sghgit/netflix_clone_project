@@ -1,0 +1,50 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <title>Netflix - {% block title %}{% endblock title %}</title>
+    {% block others %}{% endblock others %}
+</head>
+
+<body class="bg-black text-gray-100 font-primary">
+    {% block content %}{% endblock content %}
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>  
+    $(document).scroll(function(e) {
+        if (scrollY > 100) {
+            $("nav").addClass("bg-gray-900")
+        }
+        else {
+            $("nav").removeClass("bg-gray-900")
+        }
+    })
+</script>
+
+
+<!-- <script>
+    const nav = document.querySelector("nav")
+
+    document.addEventListener("scroll", function(e) {
+        if (scrollY > 100) {
+            nav.classList.add("bg-gray-900")
+
+        }
+        else {
+            nav.classList.remove("bg-gray-900")
+        }
+    })
+</script> -->
+</html>
+
+
+
+
